@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChefHat, Utensils } from 'lucide-react';
+import { ChefHat, Utensils, Menu as MenuIcon } from 'lucide-react';
 import { AspectRatio } from './ui/aspect-ratio';
+import { Button } from './ui/button';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -106,19 +107,24 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button
+            <Button
               onClick={() => scrollToSection('menu')}
-              className="px-8 py-3 rounded-full bg-accent-red text-white font-medium hover:bg-accent-red/90 transition-colors flex items-center justify-center gap-2"
+              variant="default"
+              size="lg"
+              className="bg-accent-red hover:bg-accent-red/90 text-white font-medium px-8 py-6 rounded-full h-auto"
             >
-              <Utensils className="w-5 h-5" />
+              <MenuIcon className="w-5 h-5 mr-2" />
               Ver Menu
-            </button>
-            <button
+            </Button>
+
+            <Button
               onClick={() => scrollToSection('book')}
-              className="px-8 py-3 rounded-full bg-white/10 text-white border border-white/20 font-medium hover:bg-white/20 transition-colors backdrop-blur-sm"
+              variant="outline"
+              size="lg"
+              className="bg-white/10 hover:bg-white/20 text-white border-white/20 backdrop-blur-sm px-8 py-6 rounded-full h-auto"
             >
               Reservar Mesa
-            </button>
+            </Button>
           </motion.div>
         </div>
       </div>
