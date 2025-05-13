@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,12 +19,20 @@ export default {
 			}
 		},
 		extend: {
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+      },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'navy': {
+          800: '#1A1F2C',
+          900: '#0F1319',
+        },
+        'accent-red': '#F97316',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
