@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Users, Clock, Check } from 'lucide-react';
+import { Calendar, Users, Clock, Check, Map } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -21,6 +21,7 @@ import {
 import { Calendar as CalendarComponent } from '@/components/ui/calendar';
 import { format } from 'date-fns';
 import { toast } from 'sonner';
+import TableMap from './TableMap';
 
 const BookTable = () => {
   const [date, setDate] = useState<Date | undefined>(undefined);
@@ -30,6 +31,8 @@ const BookTable = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isTableMapOpen, setIsTableMapOpen] = useState(false);
+  const [selectedTable, setSelectedTable] = useState<string | null>(null);
   
   const timeSlots = [
     '11:30 AM', '12:00 PM', '12:30 PM', '1:00 PM', '1:30 PM',
@@ -47,7 +50,7 @@ const BookTable = () => {
     }
     
     // Here you would typically send the reservation data to your backend
-    console.log({ date, time, guests, name, email, phone });
+    console.log({ date, time, guests, name, email, phone, tableNumber: selectedTable });
     
     // Show success state
     setIsSubmitted(true);
@@ -61,6 +64,7 @@ const BookTable = () => {
       setName('');
       setEmail('');
       setPhone('');
+      setSelectedTable(null);
       setIsSubmitted(false);
     }, 3000);
   };
@@ -106,6 +110,7 @@ const BookTable = () => {
                   <h5 className="text-xl font-bold text-navy-800 mb-2">Reservation Confirmed!</h5>
                   <p className="text-slate-600">
                     Thank you for choosing Kitsune. We look forward to serving you.
+                    {selectedTable && <span className="block mt-2">Your table: #{selectedTable}</span>}
                   </p>
                 </div>
               ) : (
@@ -212,12 +217,29 @@ const BookTable = () => {
                     </div>
                   </div>
                   
-                  <Button
-                    type="submit"
-                    className="w-full bg-accent-red hover:bg-accent-red/90 text-white"
-                  >
-                    Reserve Now
-                  </Button>
+                  <div className="space-y-2">
+                    <Label className="text-navy-800">Table Selection</Label>
+                    <div className="flex items-center gap-2">
+                      <Button 
+                        type="button" 
+                        variant="outline"
+                        className="w-full justify-start text-left font-normal border-slate-300 text-slate-700"
+                        onClick={() => setIsTableMapOpen(true)}
+                      >
+                        <Map className="mr-2 h-4 w-4" />
+                        {selectedTable ? `Table #${selectedTable} Selected` : "Choose Your Table"}
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4">
+                    <Button
+                      type="submit"
+                      className="w-full bg-accent-red hover:bg-accent-red/90 text-white"
+                    >
+                      Reserve Now
+                    </Button>
+                  </div>
                 </form>
               )}
             </div>
@@ -255,6 +277,14 @@ const BookTable = () => {
           </div>
         </div>
       </div>
+      
+      {/* Table Map Dialog */}
+      <TableMap
+        open={isTableMapOpen}
+        onOpenChange={setIsTableMapOpen}
+        onTableSelect={setSelectedTable}
+        selectedTable={selectedTable}
+      />
     </div>
   );
 };

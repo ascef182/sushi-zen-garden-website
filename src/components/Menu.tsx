@@ -106,17 +106,16 @@ const Menu = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="border border-neutral-200 rounded-lg p-6 hover:shadow-md transition-shadow relative"
               >
-                {item.popular && (
-                  <div className="absolute top-4 right-4">
-                    <span className="inline-block px-3 py-1 bg-accent-red/10 text-accent-red text-xs font-medium rounded-full">
-                      Popular
-                    </span>
-                  </div>
-                )}
-                
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="text-xl font-playfair font-bold text-navy-800">{item.name}</h4>
-                  <span className="text-lg font-medium text-accent-red">{item.price}</span>
+                  <div className="flex flex-col items-end">
+                    {item.popular && (
+                      <span className="inline-block mb-1 px-3 py-1 bg-accent-red/10 text-accent-red text-xs font-medium rounded-full">
+                        Popular
+                      </span>
+                    )}
+                    <span className="text-lg font-medium text-accent-red">{item.price}</span>
+                  </div>
                 </div>
                 
                 <p className="text-slate-600">{item.description}</p>
