@@ -20,7 +20,7 @@ const About = () => {
               <div className="absolute -top-3 -left-3 w-full h-full border-2 border-accent-red rounded-lg"></div>
               <img 
                 src="https://images.unsplash.com/photo-1628432136678-43ff9be34064?q=80&w=2826&auto=format&fit=crop" 
-                alt="Master Chef" 
+                alt="Chef Principal" 
                 className="w-full h-[500px] object-cover rounded-lg shadow-xl" 
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
@@ -36,35 +36,35 @@ const About = () => {
           <div className="w-full md:w-1/2">
             <div className="flex items-center gap-2 mb-4">
               <Info size={20} className="text-accent-red" />
-              <h2 className="text-lg font-medium text-accent-red">Our Story</h2>
+              <h2 className="text-lg font-medium text-accent-red">Nossa História</h2>
             </div>
             
             <h3 className="text-4xl md:text-5xl font-playfair font-bold text-navy-800 mb-6">
-              Tradition Meets Innovation
+              Tradição Encontra Inovação
             </h3>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Founded by Master Chef Hiroshi Tanaka, Kitsune has been a staple of authentic Japanese cuisine since 1987. Our journey began with a vision to bring the true essence of Japan's culinary artistry to the heart of the city.
+                Fundado pelo Chef Mestre Hiroshi Tanaka, o Kitsune tem sido um pilar da autêntica culinária japonesa desde 1987. Nossa jornada começou com uma visão de trazer a verdadeira essência da arte culinária do Japão para o coração da cidade.
               </p>
               
               <p>
-                For over three decades, we've maintained our commitment to quality, sourcing the freshest ingredients and seafood daily. Every dish that leaves our kitchen embodies the perfect balance between time-honored techniques and contemporary creativity.
+                Por mais de três décadas, mantemos nosso compromisso com a qualidade, obtendo os ingredientes mais frescos e frutos do mar diariamente. Cada prato que sai da nossa cozinha incorpora o equilíbrio perfeito entre técnicas tradicionais e criatividade contemporânea.
               </p>
               
               <p>
-                Our team of chefs train for years to master the delicate art of sushi-making, ensuring that each bite tells a story of tradition, passion, and meticulous attention to detail.
+                Nossa equipe de chefs treina por anos para dominar a delicada arte do sushi, garantindo que cada mordida conte uma história de tradição, paixão e atenção meticulosa aos detalhes.
               </p>
             </div>
             
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <div className="border-l-4 border-accent-red pl-4">
-                <div className="font-medium text-navy-800">Master Chef</div>
+                <div className="font-medium text-navy-800">Chef Mestre</div>
                 <div className="text-lg font-playfair font-bold text-navy-800">Hiroshi Tanaka</div>
               </div>
               
               <div className="border-l-4 border-accent-red pl-4">
-                <div className="font-medium text-navy-800">Head Sommelier</div>
+                <div className="font-medium text-navy-800">Sommelier Chefe</div>
                 <div className="text-lg font-playfair font-bold text-navy-800">Akira Yamaguchi</div>
               </div>
             </div>

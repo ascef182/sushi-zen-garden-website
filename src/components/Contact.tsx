@@ -16,15 +16,15 @@ const Contact = () => {
         >
           <div className="flex items-center justify-center gap-2 mb-4">
             <Mail size={20} className="text-accent-red" />
-            <h2 className="text-lg font-medium text-accent-red">Get in Touch</h2>
+            <h2 className="text-lg font-medium text-accent-red">Entre em Contato</h2>
           </div>
           
           <h3 className="text-4xl md:text-5xl font-playfair font-bold text-navy-800 mb-6">
-            Contact Us
+            Contato
           </h3>
           
           <p className="text-slate-700 max-w-2xl mx-auto">
-            Have questions about our menu, events, or private dining options? We're here to help. Reach out to us through any of the channels below.
+            Tem perguntas sobre nosso menu, eventos ou opções de jantar privado? Estamos aqui para ajudar. Entre em contato conosco através de qualquer um dos canais abaixo.
           </p>
         </motion.div>
         
@@ -42,12 +42,12 @@ const Contact = () => {
               <MapPin size={24} className="text-accent-red" />
             </div>
             
-            <h4 className="text-xl font-playfair font-bold text-navy-800 mb-2">Location</h4>
+            <h4 className="text-xl font-playfair font-bold text-navy-800 mb-2">Localização</h4>
             
             <p className="text-slate-600">
-              123 Sushi Way<br />
-              Sakura District<br />
-              New York, NY 10001
+              Rua dos Sushis, 123<br />
+              Bairro Sakura<br />
+              São Paulo, SP 01001-000
             </p>
           </motion.div>
           
@@ -63,19 +63,19 @@ const Contact = () => {
               <Phone size={24} className="text-accent-red" />
             </div>
             
-            <h4 className="text-xl font-playfair font-bold text-navy-800 mb-2">Phone</h4>
+            <h4 className="text-xl font-playfair font-bold text-navy-800 mb-2">Telefone</h4>
             
             <p className="text-slate-600 mb-2">
-              Reservations:<br />
-              <a href="tel:+12125557890" className="text-accent-red hover:underline">
-                (212) 555-7890
+              Reservas:<br />
+              <a href="tel:+551125557890" className="text-accent-red hover:underline">
+                (11) 2555-7890
               </a>
             </p>
             
             <p className="text-slate-600">
-              Private Events:<br />
-              <a href="tel:+12125557891" className="text-accent-red hover:underline">
-                (212) 555-7891
+              Eventos Privados:<br />
+              <a href="tel:+551125557891" className="text-accent-red hover:underline">
+                (11) 2555-7891
               </a>
             </p>
           </motion.div>
@@ -95,14 +95,14 @@ const Contact = () => {
             <h4 className="text-xl font-playfair font-bold text-navy-800 mb-2">Email</h4>
             
             <p className="text-slate-600 mb-2">
-              Reservations:<br />
-              <a href="mailto:reservations@kitsune.com" className="text-accent-red hover:underline">
-                reservations@kitsune.com
+              Reservas:<br />
+              <a href="mailto:reservas@kitsune.com" className="text-accent-red hover:underline">
+                reservas@kitsune.com
               </a>
             </p>
             
             <p className="text-slate-600">
-              General Inquiries:<br />
+              Informações Gerais:<br />
               <a href="mailto:info@kitsune.com" className="text-accent-red hover:underline">
                 info@kitsune.com
               </a>
@@ -120,7 +120,7 @@ const Contact = () => {
         >
           <div className="absolute inset-0 bg-navy-800/10 pointer-events-none"></div>
           <iframe
-            title="Restaurant Location"
+            title="Localização do Restaurante"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12087.846030223523!2d-73.9876452!3d40.7501914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1587133365605!5m2!1sen!2sus"
             width="100%"
             height="100%"

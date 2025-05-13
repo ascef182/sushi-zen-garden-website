@@ -23,10 +23,10 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   };
 
   const navLinks = [
-    { name: 'About', section: 'about' },
+    { name: 'Sobre', section: 'about' },
     { name: 'Menu', section: 'menu' },
-    { name: 'Reservations', section: 'book' },
-    { name: 'Contact', section: 'contact' },
+    { name: 'Reservas', section: 'book' },
+    { name: 'Contato', section: 'contact' },
   ];
 
   return (

@@ -37,7 +37,7 @@ const Hero = () => {
           <AspectRatio ratio={1/1}>
             <img 
               src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=2940&auto=format&fit=crop" 
-              alt="Sushi plate" 
+              alt="Prato de sushi" 
               className="object-cover w-full h-full"
             />
           </AspectRatio>
@@ -54,7 +54,7 @@ const Hero = () => {
           <AspectRatio ratio={1/1}>
             <img 
               src="https://images.unsplash.com/photo-1582450871972-ab5ca641643d?q=80&w=2787&auto=format&fit=crop" 
-              alt="Sushi rolls" 
+              alt="Rolls de sushi" 
               className="object-cover w-full h-full"
             />
           </AspectRatio>
@@ -76,7 +76,7 @@ const Hero = () => {
             <span className="inline-block px-4 py-1 rounded-full bg-accent-red/10 text-accent-red font-medium text-sm">
               <span className="flex items-center gap-2">
                 <ChefHat className="w-4 h-4" />
-                Authentic Japanese Cuisine
+                Autêntica Culinária Japonesa
                 <Utensils className="w-4 h-4" />
               </span>
             </span>
@@ -136,7 +136,7 @@ const Hero = () => {
             <div className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-t-3xl shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1617196034183-421b4917c92d?q=80&w=3270&auto=format&fit=crop" 
-                alt="Japanese sushi platter" 
+                alt="Prato de sushi japonês" 
                 className="w-full object-cover h-60" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>

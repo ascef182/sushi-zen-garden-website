@@ -23,7 +23,7 @@ const Footer = () => {
               <span className="text-accent-red">秘</span>Kitsune
             </h3>
             <p className="text-white/70 text-sm">
-              Authentic Japanese cuisine celebrating the art of sushi, tradition, and innovation since 1987.
+              Autêntica culinária japonesa celebrando a arte do sushi, tradição e inovação desde 1987.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white/70 hover:text-accent-red transition-colors" aria-label="Facebook">
@@ -40,14 +40,14 @@ const Footer = () => {
           
           {/* Column 2 - Navigation */}
           <div className="space-y-4">
-            <h4 className="text-lg font-bold mb-4">Navigation</h4>
+            <h4 className="text-lg font-bold mb-4">Navegação</h4>
             <ul className="space-y-2">
               <li>
                 <button 
                   onClick={() => scrollToSection('about')} 
                   className="text-white/70 hover:text-accent-red transition-colors"
                 >
-                  About
+                  Sobre
                 </button>
               </li>
               <li>
@@ -63,7 +63,7 @@ const Footer = () => {
                   onClick={() => scrollToSection('book')} 
                   className="text-white/70 hover:text-accent-red transition-colors"
                 >
-                  Reservations
+                  Reservas
                 </button>
               </li>
               <li>
@@ -71,7 +71,7 @@ const Footer = () => {
                   onClick={() => scrollToSection('contact')} 
                   className="text-white/70 hover:text-accent-red transition-colors"
                 >
-                  Contact
+                  Contato
                 </button>
               </li>
             </ul>
@@ -79,33 +79,33 @@ const Footer = () => {
           
           {/* Column 3 - Hours */}
           <div className="space-y-4">
-            <h4 className="text-lg font-bold mb-4">Hours</h4>
+            <h4 className="text-lg font-bold mb-4">Horários</h4>
             <ul className="space-y-2 text-white/70">
               <li className="flex justify-between">
-                <span>Monday - Thursday</span>
-                <span>11:30 AM - 10:00 PM</span>
+                <span>Segunda - Quinta</span>
+                <span>11:30 - 22:00</span>
               </li>
               <li className="flex justify-between">
-                <span>Friday - Saturday</span>
-                <span>11:30 AM - 11:00 PM</span>
+                <span>Sexta - Sábado</span>
+                <span>11:30 - 23:00</span>
               </li>
               <li className="flex justify-between">
-                <span>Sunday</span>
-                <span>12:00 PM - 9:00 PM</span>
+                <span>Domingo</span>
+                <span>12:00 - 21:00</span>
               </li>
             </ul>
           </div>
           
           {/* Column 4 - Contact */}
           <div className="space-y-4">
-            <h4 className="text-lg font-bold mb-4">Contact</h4>
+            <h4 className="text-lg font-bold mb-4">Contato</h4>
             <address className="not-italic text-white/70 space-y-2">
-              <p>123 Sushi Way</p>
-              <p>Sakura District</p>
-              <p>New York, NY 10001</p>
+              <p>Rua dos Sushis, 123</p>
+              <p>Bairro Sakura</p>
+              <p>São Paulo, SP 01001-000</p>
               <p className="mt-4">
-                <a href="tel:+12125557890" className="hover:text-accent-red transition-colors">
-                  (212) 555-7890
+                <a href="tel:+551125557890" className="hover:text-accent-red transition-colors">
+                  (11) 2555-7890
                 </a>
               </p>
               <p>
@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/50 text-sm">
-          <p>© {new Date().getFullYear()} Kitsune Japanese Restaurant. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Kitsune Restaurante Japonês. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

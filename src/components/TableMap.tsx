@@ -32,7 +32,7 @@ const TableMap: React.FC<TableMapProps> = ({ open, onOpenChange, onTableSelect, 
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[700px] max-h-[80vh] overflow-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-playfair text-center">Choose Your Table</DialogTitle>
+          <DialogTitle className="text-2xl font-playfair text-center">Escolha Sua Mesa</DialogTitle>
         </DialogHeader>
         
         <div className="relative bg-[#e8d9b9] p-4 rounded-lg mt-4">
@@ -81,14 +81,14 @@ const TableMap: React.FC<TableMapProps> = ({ open, onOpenChange, onTableSelect, 
         
         <div className="flex justify-between mt-4">
           <Button variant="outline" onClick={() => onOpenChange(false)}>
-            Cancel
+            Cancelar
           </Button>
           <Button 
             className="bg-accent-red text-white hover:bg-accent-red/90"
             onClick={() => onOpenChange(false)}
             disabled={!selectedTable}
           >
-            Confirm Table #{selectedTable}
+            Confirmar Mesa #{selectedTable}
           </Button>
         </div>
       </DialogContent>

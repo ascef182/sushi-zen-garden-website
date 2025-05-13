@@ -18,38 +18,38 @@ const Menu = () => {
   const categories: { id: MenuCategory; name: string }[] = [
     { id: 'sushi', name: 'Nigiri Sushi' },
     { id: 'sashimi', name: 'Sashimi' },
-    { id: 'rolls', name: 'Specialty Rolls' },
-    { id: 'signature', name: 'Signature Dishes' },
+    { id: 'rolls', name: 'Rolls Especiais' },
+    { id: 'signature', name: 'Pratos Exclusivos' },
   ];
 
   const menuItems: Record<MenuCategory, MenuItem[]> = {
     sushi: [
-      { name: 'Otoro (Fatty Tuna)', description: 'Premium fatty tuna belly, rich and buttery', price: '$14' },
-      { name: 'Uni (Sea Urchin)', description: 'Fresh sea urchin with a sweet, oceanic flavor', price: '$18', popular: true },
-      { name: 'Amaebi (Sweet Shrimp)', description: 'Raw sweet shrimp with a delicate sweetness', price: '$10' },
-      { name: 'Unagi (Freshwater Eel)', description: 'Grilled freshwater eel glazed with sweet sauce', price: '$12' },
-      { name: 'Hamachi (Yellowtail)', description: 'Wild-caught yellowtail with a buttery texture', price: '$9' },
+      { name: 'Otoro (Atum Gordo)', description: 'Barriga de atum premium, rica e amanteigada', price: 'R$70' },
+      { name: 'Uni (Ouriço do Mar)', description: 'Ouriço do mar fresco com sabor doce e oceânico', price: 'R$90', popular: true },
+      { name: 'Amaebi (Camarão Doce)', description: 'Camarão doce cru com delicada doçura', price: 'R$50' },
+      { name: 'Unagi (Enguia de Água Doce)', description: 'Enguia de água doce grelhada com molho doce', price: 'R$60' },
+      { name: 'Hamachi (Olhete)', description: 'Peixe olhete selvagem com textura amanteigada', price: 'R$45' },
     ],
     sashimi: [
-      { name: 'Premium Sashimi Platter', description: '9 pieces of chef-selected premium fish', price: '$35', popular: true },
-      { name: 'Maguro (Tuna) Sashimi', description: '5 pieces of fresh bluefin tuna', price: '$24' },
-      { name: 'Sake (Salmon) Sashimi', description: '5 pieces of wild-caught salmon', price: '$20' },
-      { name: 'Hotate (Scallop) Sashimi', description: '5 pieces of sweet Hokkaido scallops', price: '$26' },
-      { name: 'Tai (Red Snapper) Sashimi', description: '5 pieces of delicate red snapper', price: '$22' },
+      { name: 'Prato Premium de Sashimi', description: '9 peças de peixe premium selecionado pelo chef', price: 'R$175', popular: true },
+      { name: 'Sashimi de Maguro (Atum)', description: '5 peças de atum azul fresco', price: 'R$120' },
+      { name: 'Sashimi de Sake (Salmão)', description: '5 peças de salmão selvagem', price: 'R$100' },
+      { name: 'Sashimi de Hotate (Vieira)', description: '5 peças de vieiras doces de Hokkaido', price: 'R$130' },
+      { name: 'Sashimi de Tai (Pargo Vermelho)', description: '5 peças de delicado pargo vermelho', price: 'R$110' },
     ],
     rolls: [
-      { name: 'Kitsune Special Roll', description: 'Toro, uni, caviar, gold flakes, wrapped in cucumber', price: '$32', popular: true },
-      { name: 'Dragon Roll', description: 'Grilled eel, avocado, cucumber, tobiko', price: '$24' },
-      { name: 'Rainbow Roll', description: 'California roll topped with assorted sashimi', price: '$22' },
-      { name: 'Spicy Tuna Roll', description: 'Chopped tuna, spicy mayo, cucumber, sprouts', price: '$18' },
-      { name: 'Soft Shell Crab Roll', description: 'Tempura soft shell crab, avocado, lettuce, tobiko', price: '$26' },
+      { name: 'Roll Especial Kitsune', description: 'Toro, uni, caviar, flocos de ouro, envolto em pepino', price: 'R$160', popular: true },
+      { name: 'Dragon Roll', description: 'Enguia grelhada, abacate, pepino, tobiko', price: 'R$120' },
+      { name: 'Rainbow Roll', description: 'California roll coberto com sashimi sortido', price: 'R$110' },
+      { name: 'Spicy Tuna Roll', description: 'Atum picado, maionese picante, pepino, brotos', price: 'R$90' },
+      { name: 'Soft Shell Crab Roll', description: 'Caranguejo de casca mole tempurá, abacate, alface, tobiko', price: 'R$130' },
     ],
     signature: [
-      { name: 'Wagyu Tataki', description: 'Seared A5 wagyu with ponzu and truffle oil', price: '$45', popular: true },
-      { name: 'Miso Black Cod', description: 'Marinated for 72 hours in our special miso blend', price: '$38' },
-      { name: 'Sakura Chirashi', description: 'Premium assorted sashimi over seasoned rice', price: '$42' },
-      { name: 'Omakase Experience', description: 'Chef\'s selection of premium seasonal dishes', price: '$120' },
-      { name: 'Lobster Tempura', description: 'Whole lobster in light tempura batter with dipping sauces', price: '$48' },
+      { name: 'Wagyu Tataki', description: 'Wagyu A5 selado com ponzu e óleo de trufa', price: 'R$225', popular: true },
+      { name: 'Bacalhau Negro Miso', description: 'Marinado por 72 horas em nossa mistura especial de miso', price: 'R$190' },
+      { name: 'Chirashi Sakura', description: 'Sashimi premium sortido sobre arroz temperado', price: 'R$210' },
+      { name: 'Experiência Omakase', description: 'Seleção do chef de pratos sazonais premium', price: 'R$600' },
+      { name: 'Lagosta Tempurá', description: 'Lagosta inteira em leve massa tempurá com molhos para mergulhar', price: 'R$240' },
     ],
   };
 
@@ -65,15 +65,15 @@ const Menu = () => {
         >
           <div className="flex items-center justify-center gap-2 mb-4">
             <Fish size={20} className="text-accent-red" />
-            <h2 className="text-lg font-medium text-accent-red">Our Offerings</h2>
+            <h2 className="text-lg font-medium text-accent-red">Nossos Pratos</h2>
           </div>
           
           <h3 className="text-4xl md:text-5xl font-playfair font-bold text-navy-800 mb-6">
-            Seasonal Menu
+            Menu Sazonal
           </h3>
           
           <p className="text-slate-700 max-w-2xl mx-auto">
-            Our menu changes with the seasons to showcase the freshest ingredients. Each dish is crafted with precision and care, highlighting the natural flavors of premium ingredients.
+            Nosso menu muda com as estações para apresentar os ingredientes mais frescos. Cada prato é preparado com precisão e cuidado, destacando os sabores naturais dos ingredientes premium.
           </p>
         </motion.div>
         
@@ -126,7 +126,7 @@ const Menu = () => {
         
         <div className="mt-12 text-center">
           <span className="italic text-slate-500">
-            * Consuming raw or undercooked seafood may increase risk of foodborne illness
+            * Consumir frutos do mar crus ou mal cozidos pode aumentar o risco de doenças transmitidas por alimentos
           </span>
         </div>
       </div>
