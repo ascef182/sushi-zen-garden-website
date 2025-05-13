@@ -5,7 +5,14 @@ import { Calendar, Users, Clock, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select } from '@/components/ui/select';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from '@/components/ui/select';
 import {
   Popover,
   PopoverContent,
@@ -161,6 +168,7 @@ const BookTable = () => {
                           onSelect={setDate}
                           initialFocus
                           disabled={(date) => date < new Date()}
+                          className="p-3 pointer-events-auto"
                         />
                       </PopoverContent>
                     </Popover>
@@ -169,43 +177,37 @@ const BookTable = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="time" className="text-navy-800">Time</Label>
-                      <Select
-                        value={time}
-                        onValueChange={setTime}
-                      >
-                        <div className="border border-slate-300 rounded-md px-3 py-2 bg-white text-slate-700">
-                          {time || <span className="text-slate-500">Select time</span>}
-                        </div>
-                        <Select.Content className="bg-white">
-                          <Select.Group>
+                      <Select value={time} onValueChange={setTime}>
+                        <SelectTrigger className="border-slate-300 bg-white text-slate-700">
+                          <SelectValue placeholder="Select time" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white">
+                          <SelectGroup>
                             {timeSlots.map((slot) => (
-                              <Select.Item key={slot} value={slot} className="cursor-pointer">
+                              <SelectItem key={slot} value={slot} className="cursor-pointer">
                                 {slot}
-                              </Select.Item>
+                              </SelectItem>
                             ))}
-                          </Select.Group>
-                        </Select.Content>
+                          </SelectGroup>
+                        </SelectContent>
                       </Select>
                     </div>
                     
                     <div className="space-y-2">
                       <Label htmlFor="guests" className="text-navy-800">Guests</Label>
-                      <Select
-                        value={guests}
-                        onValueChange={setGuests}
-                      >
-                        <div className="border border-slate-300 rounded-md px-3 py-2 bg-white text-slate-700">
-                          {guests || <span className="text-slate-500">Select guests</span>}
-                        </div>
-                        <Select.Content className="bg-white">
-                          <Select.Group>
+                      <Select value={guests} onValueChange={setGuests}>
+                        <SelectTrigger className="border-slate-300 bg-white text-slate-700">
+                          <SelectValue placeholder="Select guests" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white">
+                          <SelectGroup>
                             {guestOptions.map((option) => (
-                              <Select.Item key={option} value={option} className="cursor-pointer">
+                              <SelectItem key={option} value={option} className="cursor-pointer">
                                 {option} {option === '1' ? 'Guest' : 'Guests'}
-                              </Select.Item>
+                              </SelectItem>
                             ))}
-                          </Select.Group>
-                        </Select.Content>
+                          </SelectGroup>
+                        </SelectContent>
                       </Select>
                     </div>
                   </div>
