@@ -67,7 +67,7 @@ const Hero = () => {
       
       {/* Main Content */}
       <div className="container mx-auto px-4 h-full flex flex-col justify-center">
-        <div className="relative z-10 max-w-4xl mx-auto text-center pt-20">
+        <div className="relative z-20 max-w-4xl mx-auto text-center pt-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center relative z-30"
           >
             <Button
               onClick={() => scrollToSection('menu')}
@@ -134,7 +134,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.0, duration: 1 }}
-        className="absolute bottom-0 left-0 right-0"
+        className="absolute bottom-0 left-0 right-0 z-10"
       >
         <div className="relative h-60 overflow-hidden">
           <div className="absolute -bottom-2 left-0 right-0 h-[200px] bg-gradient-to-t from-neutral-50 to-transparent z-10"></div>
